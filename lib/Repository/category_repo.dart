@@ -12,7 +12,7 @@ class CategoryRepo {
 
 
 
-
+  print(response.data);
   return categoyModel;
   }
 

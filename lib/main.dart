@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task/carousel_cubit/carousel_cubit.dart';
 import 'package:task/cubits/auth_cubit/cubit/auth_cubit_cubit.dart';
 import 'package:task/cubits/car_cubit/cart_cubit.dart';
+import 'package:task/screens/home.dart';
 import 'package:task/screens/product_details.dart';
 
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       ],
       
       child: MaterialApp(
-        home: ProductDetails(),
+        home: HomeScreen(),
       ),
     );
   }

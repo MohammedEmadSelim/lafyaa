@@ -10,8 +10,8 @@ class CartCubit extends Cubit<CartState> {
 
   void addToCart(int productId, String? token) async {
     emit(ItemAddedLoading());
-    final Response<dynamic> res = await AddToCartRepo().postItem(productId,token);
-    final status = res.data['status'] as bool;
+    final Response<dynamic> ?res = await AddToCartRepo().postItem(productId,token);
+    final status = res!.data['status'] as bool;
     final message = res.data['message'] as String;
     if(message =='Added Successfully'){
       emit(ItemAddedToCart());
